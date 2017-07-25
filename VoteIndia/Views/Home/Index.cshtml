@@ -10,21 +10,23 @@
         input[type="radio"] {
             margin: 0 10px 10px 10px;
         }
+        
     </style>
     <div class="row">
         <div class="col-md-8">
-             <div class="col-md-8">
-                Question :
-                @Html.Label("hello", Model.Description)
-                Options :
-                 <div>
-                     @foreach (var option in Model.Options)
-                     {
-                         @Html.RadioButton("option", @option, false)
-                         @Html.Label(@option)
-                     }
-                 </div>
+            <div class="col-md-8">
+                <h3> Question : </h3>
+                @Html.Label(Model.Description)
+               
+                <h3>Options : </h3>
+                @foreach (var option in Model.Options)
+                {
+                  
+                   <h6>@Html.RadioButton("option", @option, false)
+                    @Html.Label(@option) </h6>
+                }
             </div>
+
         <div class="col-md-4 jumbotron">
             <p><a class="btn btn-default active" href="#">Who is the best comedian?</a></p>
             <p><a class="btn btn-default" href="#">Who is the best criketer?</a></p>
