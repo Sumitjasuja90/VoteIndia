@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<questions>
+<question id ="1">
+  <description> Is GST good for you ? </description>
+  <options>
+    <a>Yes</a>
+    <b>No</b>
+    <c>Can't say</c>
+    <d>No Impact</d>
+  </options>
+</question>
+
+<question id ="2">
+  <description> Is GST good for you ? </description>
+  <options>
+    <a>Yes</a>
+    <b>No</b>
+    <c>Can't say</c>
+    <d>No Impact</d>
+  </options>
+</question>
+</questions>
