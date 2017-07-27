@@ -12,8 +12,21 @@ namespace VoteIndia.Controllers
     {
         public ActionResult Index()
         {
-            QuestionsAnswer qa = new QuestionsAnswer().GetAllQuestionsFromXML();
+            int question_id = 1;
+            QuestionsAnswer qa = new QuestionsAnswer().GetAllQuestionsFromXML(question_id);
+            QuestionsAnswer qa1 = new QuestionsAnswer().GetResultFromXML(question_id);
             return View(qa);
+        }
+
+        /// <summary>
+        /// This action returns the result of the given question in precentage.
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Result()
+        {
+            int question_id = 1;
+            QuestionsAnswer result = new QuestionsAnswer().GetResultFromXML(question_id);
+            return View(result);
         }
     }
 }

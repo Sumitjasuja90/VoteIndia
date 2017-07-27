@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<questions>
+  <question id ="1">
+    <options>
+      <a>60</a>
+      <b>50</b>
+      <c>45</c>
+      <d>55</d>
+    </options>
+  </question>
+
+  <question id ="2">
+    <options>
+      <a>60</a>
+      <b>50</b>
+      <c>45</c>
+      <d>55</d>
+    </options>
+  </question>
+</questions>
