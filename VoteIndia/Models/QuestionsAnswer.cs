@@ -26,6 +26,7 @@ namespace VoteIndia.Models
             {
                 if (Convert.ToInt16(qa.Attribute("id").Value) == questionId)
                 {
+                    result.id = Convert.ToInt16(qa.Element("description").Value);
                     result.Description = qa.Element("description").Value;
                     result.Options.Add(qa.Element("options").Element("a").Value);
                     result.Options.Add(qa.Element("options").Element("b").Value);
