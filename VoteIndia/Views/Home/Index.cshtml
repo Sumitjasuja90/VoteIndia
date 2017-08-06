@@ -16,6 +16,11 @@
             margin-right: auto;
         }
     </style>
+<body>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+@Html.HiddenFor(m => m.id, new { @id = "id" })
+@*    @Html.Hidden("qid", Model.id, new { @id = "id" })*@
     <div class="row">
         <div class="col-md-12 ">
             <div class="col-md-8 center-block">
@@ -27,11 +32,11 @@
                 {
 
                     <h6>
-                        @Html.RadioButton("option",@option,false)
+                        @Html.RadioButtonFor(m=>m.selectanswer,@option,false)
                         @Html.Label(@option)
                     </h6>
                 }
-                @Html.ActionLink("Submit", "Submit", new { @id = Model.id}, new { @class = "btn btn-primary" })
+               <input id="btnSubmit" type="submit" value="Submit" />
             </div>
             
             <div class="col-md-4 jumbotron">
@@ -40,4 +45,5 @@
             </div>
         </div>
    </div>
-
+}
+</body>

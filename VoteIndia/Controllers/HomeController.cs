@@ -12,7 +12,6 @@ namespace VoteIndia.Controllers
         {
             int question_id = 1;
             QuestionsAnswer qa = new QuestionsAnswer().GetAllQuestionsFromXML(question_id);
-            QuestionsAnswer qa1 = new QuestionsAnswer().GetResultFromXML(question_id);
             return View(qa);
         }
 
@@ -21,11 +20,16 @@ namespace VoteIndia.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost] 
-        public ActionResult Submit(int id)
+        public ActionResult Index(FormCollection form, QuestionsAnswer model)
         {
             int question_id = 1;
-            QuestionsAnswer result = new QuestionsAnswer().GetResultFromXML(question_id);
-            return View(result);
+            Boolean isSaved = new QuestionsAnswer().SaveAnswerInXML(question_id, Convert.ToString(form["selectanswer"]));
+            QuestionsResult result = null;
+            if (isSaved)
+            {
+                result = new QuestionsResult().GetResultFromXML(question_id);
+            }
+            return View("_Result", result);
         }
     }
 }

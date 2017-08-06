@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace VoteIndia.Models
@@ -10,8 +11,9 @@ namespace VoteIndia.Models
     {
         public int id;
         public string Description;
+        public string selectanswer { get; set; }
         public List<string> Options = new List<string>();
-
+       
         /// <summary>
         /// This method gets the question description and options from XML for the given question ID.
         /// </summary>
@@ -26,7 +28,7 @@ namespace VoteIndia.Models
             {
                 if (Convert.ToInt16(qa.Attribute("id").Value) == questionId)
                 {
-                    result.id = Convert.ToInt16(qa.Element("description").Value);
+                   // result.id = Convert.ToInt16(qa.Element("id").Value);
                     result.Description = qa.Element("description").Value;
                     result.Options.Add(qa.Element("options").Element("a").Value);
                     result.Options.Add(qa.Element("options").Element("b").Value);
@@ -43,38 +45,33 @@ namespace VoteIndia.Models
         /// </summary>
         /// <param name="questionId"></param>
         /// <returns></returns>
-        public QuestionsAnswer GetResultFromXML(int questionId)
+        public Boolean SaveAnswerInXML(int questionId, string ansResult = "")
         {
-            XDocument doc = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/XML/QuestionsResult.xml"));
-            XElement questions = doc.Element("questions");
-            QuestionsAnswer result = new QuestionsAnswer();
-            result.id = questionId;
-            foreach (XElement qa in questions.Elements("question"))
+            XDocument docAns = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/XML/QuestionsResult.xml"));
+            XElement node = docAns.Descendants("question").FirstOrDefault(a => a.Attribute("id").Value == Convert.ToString(questionId)).Descendants("options").FirstOrDefault();
+            string ansOption = "";
+            if (!string.IsNullOrEmpty(ansResult))
             {
-                if (Convert.ToInt16(qa.Attribute("id").Value) == questionId)
+                switch (ansResult)
                 {
-                    result = CalculatePercentage(qa.Element("options"));
-                    break;
+                    case "Yes":
+                        ansOption = "a";
+                        break;
+                    case "No":
+                        ansOption = "b";
+                        break;
+                    case "Can't say":
+                        ansOption = "c";
+                        break;
+                    case "No Impact":
+                        ansOption = "d";
+                        break;
                 }
+                var value = Convert.ToInt32(node.Element(ansOption).Value);
+                node.SetElementValue(ansOption, value + 1);
+                docAns.Save(HttpContext.Current.Server.MapPath("~/App_Data/XML/QuestionsResult.xml"));
             }
-            return result;
-        }
-
-        private QuestionsAnswer CalculatePercentage(XElement options)
-        {
-            QuestionsAnswer result = new QuestionsAnswer();
-            Int64 totalVotes = 0;
-
-            foreach (XElement opt in options.Elements())
-            {
-                totalVotes += Convert.ToInt64(opt.Value);
-            }
-            foreach (XElement opt in options.Elements())
-            {
-               string precentage = String.Format("{0:0.00}%", Convert.ToDouble(opt.Value) * 100/totalVotes);
-               result.Options.Add(precentage);
-            }
-            return result;
-        }
-    }
+            return true;
+         }
+   }
 }
