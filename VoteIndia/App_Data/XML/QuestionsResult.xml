@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <questions>
   <question id="1">
+    <description> Is GST good for you ? </description>
     <options>
-      <a>87</a>
-      <b>54</b>
+      <a>100</a>
+      <b>55</b>
       <c>53</c>
       <d>55</d>
     </options>
   </question>
   <question id="2">
+    <description> Is GST good for you ? </description>
     <options>
       <a>60</a>
       <b>50</b>

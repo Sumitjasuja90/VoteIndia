@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VoteIndia.Models;
+using BusinessModel;
 namespace VoteIndia.Controllers
 {
     public class HomeController : Controller
@@ -11,8 +12,9 @@ namespace VoteIndia.Controllers
         public ActionResult Index()
         {
             int question_id = 1;
-            QuestionsAnswer qa = new QuestionsAnswer().GetAllQuestionsFromXML(question_id);
-            return View(qa);
+            QuestionSetModel model = new QuestionFacade().GetQuestions(question_id);
+            //QuestionsAnswer qa = new QuestionsAnswer().GetAllQuestionsFromXML(question_id);
+            return View(model);
         }
 
         /// <summary>

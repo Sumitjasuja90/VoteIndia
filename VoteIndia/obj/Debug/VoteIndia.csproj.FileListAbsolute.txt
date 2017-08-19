@@ -65,3 +65,46 @@ c:\users\hp\documents\visual studio 2017\Projects\VoteIndia\VoteIndia\bin\Micros
 c:\users\hp\documents\visual studio 2017\Projects\VoteIndia\VoteIndia\obj\Debug\VoteIndia.csprojResolveAssemblyReference.cache
 c:\users\hp\documents\visual studio 2017\Projects\VoteIndia\VoteIndia\obj\Debug\VoteIndia.dll
 c:\users\hp\documents\visual studio 2017\Projects\VoteIndia\VoteIndia\obj\Debug\VoteIndia.pdb
+E:\VoteIndia\VoteIndia\VoteIndia\obj\Debug\VoteIndia.csprojResolveAssemblyReference.cache
+E:\VoteIndia\VoteIndia\VoteIndia\obj\Debug\VoteIndia.dll
+E:\VoteIndia\VoteIndia\VoteIndia\obj\Debug\VoteIndia.pdb
+E:\VoteIndia\VoteIndia\VoteIndia\bin\ApplicationInsights.config
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\csc.exe.config
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\csc.rsp
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\csi.rsp
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\vbc.exe.config
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\vbc.rsp
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\VBCSCompiler.exe.config
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\csc.exe
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\csi.exe
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\System.AppContext.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\System.Collections.Immutable.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\System.IO.FileSystem.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\System.Reflection.Metadata.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\vbc.exe
+E:\VoteIndia\VoteIndia\VoteIndia\bin\roslyn\VBCSCompiler.exe
+E:\VoteIndia\VoteIndia\VoteIndia\bin\VoteIndia.dll.config
+E:\VoteIndia\VoteIndia\VoteIndia\bin\VoteIndia.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\VoteIndia.pdb
+E:\VoteIndia\VoteIndia\VoteIndia\bin\BusinessObject.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\DataObject.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\EntityFramework.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\BusinessObject.pdb
+E:\VoteIndia\VoteIndia\VoteIndia\bin\DataObject.pdb
+E:\VoteIndia\VoteIndia\VoteIndia\bin\EntityFramework.xml
+E:\VoteIndia\VoteIndia\VoteIndia\bin\EntityFramework.SqlServer.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\EntityFramework.SqlServer.xml
+E:\VoteIndia\VoteIndia\VoteIndia\bin\BusinessModel.dll
+E:\VoteIndia\VoteIndia\VoteIndia\bin\BusinessModel.pdb

@@ -1,4 +1,4 @@
-﻿@model VoteIndia.Models.QuestionsAnswer
+﻿@model BusinessModel.QuestionSetModel
 
     @{
         ViewBag.Title = "Home Page";
@@ -19,27 +19,26 @@
 <body>
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
-@Html.HiddenFor(m => m.id, new { @id = "id" })
+@Html.HiddenFor(m => m.QId, new { @QId = "QId" })
 @*    @Html.Hidden("qid", Model.id, new { @id = "id" })*@
     <div class="row">
         <div class="col-md-12 ">
-            <div class="col-md-8 center-block">
+            <div class="col-md-8 col-sm-7 center-block">
                 <h3> Question : </h3>
                 @Html.Label(Model.Description)
-
                 <h3>Options : </h3>
                 @foreach (var option in Model.Options)
                 {
 
                     <h6>
-                        @Html.RadioButtonFor(m=>m.selectanswer,@option,false)
-                        @Html.Label(@option)
+                        @Html.RadioButtonFor(m => m.selectanswer, @option, false)
+                        @Html.Label(@option.Option)
                     </h6>
                 }
-               <input id="btnSubmit" type="submit" value="Submit" />
+                <input id="btnSubmit" type="submit" value="Submit" />
             </div>
             
-            <div class="col-md-4 jumbotron">
+            <div class="col-md-4 col-sm-5 jumbotron">
                 <p><a class="btn btn-default active" href="#">Who is the best comedian?</a></p>
                 <p><a class="btn btn-default" href="#">Who is the best criketer?</a></p>
             </div>
